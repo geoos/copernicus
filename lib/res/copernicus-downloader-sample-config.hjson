@@ -1,0 +1,31 @@
+{
+    "limits":{"w":-130.0, "e":-20.0,"s":-75.0, "n":30.0},
+    "copernicusAuth":{
+        "user":"jjimenez",
+        "pwd":"Pomeo.123"
+    },
+    "products":[
+        {
+            "dataSetCode":"copernicus-CHL-L4",
+            "url":"http://nrt.cmems-du.eu/motu-web/Motu",
+            "publishDateFormat":"YYYY-MM-DD 00:00:00",
+            "serviceId":"OCEANCOLOUR_GLO_CHL_L4_NRT_OBSERVATIONS_009_033-TDS",
+            "productId":"dataset-oc-glo-bio-multi-l4-chl_interpolated_4km_daily-rt",
+            "variables":["CHL","CHL_error"]
+        }, {
+            "dataSetCode":"copernicus-SST-L4",
+            "url":"http://nrt.cmems-du.eu/motu-web/Motu",
+            "publishDateFormat":"YYYY-MM-DD 12:00:00",
+            "serviceId":"SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001-TDS",
+            "productId":"METOFFICE-GLO-SST-L4-NRT-OBS-ANOM-V2",
+            "variables":["analysed_sst", "sst_anomaly"]
+        }, {
+            "dataSetCode":"copernicus-PHY-L4",
+            "url":"http://nrt.cmems-du.eu/motu-web/Motu",
+            "publishDateFormat":"YYYY-MM-DD 00:00:00",
+            "serviceId":"SEALEVEL_GLO_PHY_L4_NRT_OBSERVATIONS_008_046-TDS",
+            "productId":"dataset-duacs-nrt-global-merged-allsat-phy-l4",
+            "variables":["adt", "err", "err_ugosa", "err_vgosa", "sla", "ugos", "ugosa", "vgos", "vgosa"]
+        }
+    ]
+}

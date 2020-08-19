@@ -1,0 +1,51 @@
+{
+    dataSet: {type: "raster", format:"netCDF"}
+    deleteFinishedFiles: false
+    temporality:{
+        value: 1, unit:days
+        searchCriteria: middle
+    }
+
+    clippingArea:{
+        w:-130.0, e:-20.0,
+        s:-75.0, n:30.0
+    }
+
+    #Grid Query Config
+    grid:{
+        maxWidth:   150
+        maxHeight:  150
+        # gdal_translate resamplig algorithm
+        # nearest (default),bilinear,cubic,cubicspline,lanczos,average,mode
+        resampling: nearest 
+    }
+    #VectorsGrid Query Config
+    vectorsGrid:{
+        maxWidth:   60
+        maxHeight:  60
+        # gdal_translate resamplig algorithm
+        # nearest (default),bilinear,cubic,cubicspline,lanczos,average,mode
+        resampling: bilinear 
+    }
+    #Contour Query Config
+    contour:{
+        maxWidth:   150
+        maxHeight:  150
+        # gdal_translate resamplig algorithm
+        # nearest (default),bilinear,cubic,cubicspline,lanczos,average,mode
+        resampling: nearest 
+    }
+
+    # Apply to All Variables in dataSet
+    # can be extended in variables definition
+    variablesDefaults:{
+        # How many periods (value, unit) should be used to search (before and ahead) if no file is found for specific time
+        searchTolerance: 0
+        options:{
+            decimals:2
+        }
+    }
+
+    variables:{        
+    }
+}
