@@ -46,6 +46,39 @@
         }
     }
 
-    variables:{        
+    variables:{
+        adt:{
+            selector:{NETCDF_VARNAME:"adt"}
+            name: Absolute Dynamic Topography
+            unit: m
+        }
+        err:{
+            selector:{NETCDF_VARNAME:"err"}
+            name: ADT - Formal Mapping Error
+            unit: m
+        }
+        ugos:{
+            selector:{NETCDF_VARNAME:"ugos"}
+            name: U - Absolute Geostrophic Velocity
+            unit: m/s
+            options:{hidden:true}
+        }
+        vgos:{
+            selector:{NETCDF_VARNAME:"vgos"}
+            name: V - Absolute Geostrophic Velocity
+            unit: m/s
+            options:{hidden:true}
+        }
+        gos:{
+            calculated:{U:"ugos", V:"vgos", formula:"sqrt(U*U + V*V)"}
+            name: Absolute Geostrophic Velocity
+            unit: m/s
+            vector:{uComponent:"ugos", vComponent:"vgos"}
+        }
+        sla:{
+            selector:{NETCDF_VARNAME:"sla"}
+            name: Sea Level Anomaly
+            unit: m
+        }
     }
 }

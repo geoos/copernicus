@@ -46,6 +46,18 @@
         }
     }
 
-    variables:{        
+    variables:{
+        analysed_sst:{
+            selector:{NETCDF_VARNAME:"analysed_sst"}
+            name: Analysed Sea Surface Temperature
+            unit: ºC
+            transform: "Z - 273.15"
+        }
+        sst_anomaly:{
+            selector:{NETCDF_VARNAME:"sst_anomaly"}
+            name: SST Anomaly from Pathfinder Climatology
+            unit: ºC
+            transform: "Z - 273.15"
+        }
     }
 }

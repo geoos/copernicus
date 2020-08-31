@@ -46,6 +46,16 @@
         }
     }
 
-    variables:{        
+    variables:{
+        CHL: {
+            selector:{NETCDF_VARNAME:"CHL"}
+            name: Chlorophyll-A Concentration
+            unit: milligram m-3
+        }
+        CHL_error: {
+            selector:{NETCDF_VARNAME:"CHL_error"}
+            name: Chlorophyll-A Concentration - Error Estimation
+            unit: %
+        }
     }
 }
